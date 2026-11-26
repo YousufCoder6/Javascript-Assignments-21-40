@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammad Yousuf — JavaScript Assignments (Chapters 21–25)</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #090d16 0%, #111827 50%, #1e293b 100%);
+      color: #f8fafc;
+      padding: 44px 20px 64px;
+    }
+
+    .wrapper {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .header {
+      background: rgba(30, 41, 59, 0.82);
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      border-radius: 20px;
+      padding: 34px;
+      margin-bottom: 32px;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+    }
+
+    .tag {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.14);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #94a3b8;
+      font-size: 1rem;
+      line-height: 1.6;
+      max-width: 760px;
+    }
+
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .stat-pill {
+      background: #0f172a;
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      color: #cbd5e1;
+      padding: 8px 14px;
+      border-radius: 10px;
+      font-size: 0.88rem;
+    }
+
+    .stat-pill strong {
+      color: #38bdf8;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: rgba(30, 41, 59, 0.88);
+      border: 1px solid rgba(148, 163, 184, 0.22);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #38bdf8;
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .chap-num {
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      color: #38bdf8;
+      text-transform: uppercase;
+    }
+
+    .topic-badge {
+      background: rgba(56, 189, 248, 0.14);
+      color: #bae6fd;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 999px;
+    }
+
+    .card h2 {
+      font-size: 1.18rem;
+      color: #f8fafc;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #94a3b8;
+      font-size: 0.92rem;
+      line-height: 1.55;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      background: #0284c7;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 0.92rem;
+      padding: 11px 14px;
+      border-radius: 10px;
+      transition: background 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #0369a1;
+    }
+
+    .footer {
+      margin-top: 38px;
+      text-align: center;
+      color: #94a3b8;
+      font-size: 0.88rem;
+      padding-top: 18px;
+      border-top: 1px solid rgba(148, 163, 184, 0.15);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.55rem;
+      }
+
+      .header {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <span class="tag">JavaScript String Manipulation • Chapters 21–25</span>
+      <h1>Muhammad Yousuf — JavaScript Assignments</h1>
+      <p class="subtitle">
+        Dedicated collection of JavaScript string manipulation assignments covering case conversion,
+        measuring length, slicing, finding segments, inspecting characters, and replacing text.
+      </p>
+      <div class="stats">
+        <div class="stat-pill">Chapters Included: <strong>21 – 25</strong></div>
+        <div class="stat-pill">Total Assignments: <strong>5</strong></div>
+      </div>
+    </header>
+
+    <main class="grid">
+      <article class="card">
+        <div>
+          <div class="card-top">
+            <span class="chap-num">Chapter 21</span>
+            <span class="topic-badge">Strings</span>
+          </div>
+          <h2>Changing Case</h2>
+          <p>Normalizing text with toLowerCase() and toUpperCase() for case-insensitive matching.</p>
+        </div>
+        <a class="btn" href="JavaScript-Chapter-21/index.html">Open Chapter 21</a>
+      </article>
+
+      <article class="card">
+        <div>
+          <div class="card-top">
+            <span class="chap-num">Chapter 22</span>
+            <span class="topic-badge">Strings</span>
+          </div>
+          <h2>Measuring Length &amp; Extracting Parts</h2>
+          <p>Using .length, slicing substrings with slice(), capitalizing first letters, and checking double spaces.</p>
+        </div>
+        <a class="btn" href="JavaScript-Chapter-22/index.html">Open Chapter 22</a>
+      </article>
+
+      <article class="card">
+        <div>
+          <div class="card-top">
+            <span class="chap-num">Chapter 23</span>
+            <span class="topic-badge">Strings</span>
+          </div>
+          <h2>Finding Segments</h2>
+          <p>Locating the first and last index positions of substrings using indexOf() and lastIndexOf().</p>
+        </div>
+        <a class="btn" href="JavaScript-Chapter-23/index.html">Open Chapter 23</a>
+      </article>
+
+      <article class="card">
+        <div>
+          <div class="card-top">
+            <span class="chap-num">Chapter 24</span>
+            <span class="topic-badge">Strings</span>
+          </div>
+          <h2>Finding a Character at a Location</h2>
+          <p>Reading individual characters by index position with charAt() and scanning for punctuation.</p>
+        </div>
+        <a class="btn" href="JavaScript-Chapter-24/index.html">Open Chapter 24</a>
+      </article>
+
+      <article class="card">
+        <div>
+          <div class="card-top">
+            <span class="chap-num">Chapter 25</span>
+            <span class="topic-badge">Strings</span>
+          </div>
+          <h2>Replacing Characters</h2>
+          <p>Replacing single matches with replace() and all occurrences globally using /pattern/g.</p>
+        </div>
+        <a class="btn" href="JavaScript-Chapter-25/index.html">Open Chapter 25</a>
+      </article>
+    </main>
+
+    <footer class="footer">
+      Muhammad Yousuf • JavaScript Assignments (Chapters 21–25)
+    </footer>
+  </div>
+</body>
+</html>

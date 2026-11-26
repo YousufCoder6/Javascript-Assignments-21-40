@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript Chapter 21 - Changing Case</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #f8fafc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 720px;
+      background: rgba(30, 41, 59, 0.92);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.15);
+      color: #7dd3fc;
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      margin-bottom: 8px;
+      color: #ffffff;
+    }
+
+    .subtitle {
+      color: #94a3b8;
+      font-size: 0.95rem;
+      margin-bottom: 22px;
+      line-height: 1.5;
+    }
+
+    .controls {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    input {
+      flex: 1;
+      min-width: 210px;
+      padding: 11px 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      background: #0f172a;
+      color: #f8fafc;
+      font-size: 0.95rem;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #38bdf8;
+    }
+
+    button {
+      padding: 11px 18px;
+      border: none;
+      border-radius: 10px;
+      background: #0284c7;
+      color: #ffffff;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    button:hover {
+      background: #0369a1;
+    }
+
+    #output {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .result-card {
+      background: #0f172a;
+      border-left: 4px solid #38bdf8;
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 0.96rem;
+      line-height: 1.5;
+    }
+
+    .result-card strong {
+      color: #bae6fd;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+   
+    <h1>Chapter 21: Changing Case</h1>
+    <p class="subtitle">
+      Normalizing user input and array items with toLowerCase() (and toUpperCase()) for clean matching
+    </p>
+
+    <div class="controls">
+      <input
+        type="text"
+        id="cityInput"
+        placeholder="Try SANTA FE, santa fe, or Karachi"
+      />
+      <button id="checkBtn" type="button">Check City</button>
+    </div>
+
+    <div id="output"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

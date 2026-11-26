@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript Chapter 25 - Replacing Characters (replace)</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #f8fafc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 760px;
+      background: rgba(30, 41, 59, 0.92);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(96, 165, 250, 0.15);
+      color: #93c5fd;
+      border: 1px solid rgba(96, 165, 250, 0.35);
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      margin-bottom: 8px;
+      color: #ffffff;
+    }
+
+    .subtitle {
+      color: #94a3b8;
+      font-size: 0.95rem;
+      margin-bottom: 22px;
+      line-height: 1.5;
+    }
+
+    .controls {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    input {
+      flex: 1;
+      min-width: 180px;
+      padding: 11px 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      background: #0f172a;
+      color: #f8fafc;
+      font-size: 0.95rem;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #60a5fa;
+    }
+
+    button {
+      padding: 11px 18px;
+      border: none;
+      border-radius: 10px;
+      background: #2563eb;
+      color: #ffffff;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    #output {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .result-card {
+      background: #0f172a;
+      border-left: 4px solid #60a5fa;
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 0.96rem;
+      line-height: 1.5;
+    }
+
+    .result-card strong {
+      color: #bfdbfe;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    
+    <h1>Chapter 25: Replacing Characters</h1>
+    <p class="subtitle">
+      Replacing a single match with replace() and replacing every match globally with /pattern/g
+    </p>
+
+    <div class="controls">
+      <input
+        type="text"
+        id="findInput"
+        placeholder="Find segment (e.g., World War II)"
+      />
+      <input
+        type="text"
+        id="replaceInput"
+        placeholder="Replace with (e.g., the Second World War)"
+      />
+      <button id="replaceBtn" type="button">Replace Text</button>
+    </div>
+
+    <div id="output"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
